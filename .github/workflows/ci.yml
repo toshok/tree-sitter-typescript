@@ -24,10 +24,12 @@ concurrency:
   cancel-in-progress: true
 
 jobs:
+
   npm-packages:
     uses: toshok/tree-sitter-workflows/.github/workflows/package-npm.yml@main
     with:
       generate: true
+  
   test:
     name: Test parsers
     runs-on: ${{matrix.os}}
